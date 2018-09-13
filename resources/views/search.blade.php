@@ -12,7 +12,7 @@
     <div class="content">
         <center>
             <div class="title m-b-md logo-holder">
-                <img src="/images/google-logo.png">
+                <img src="/images/google-logo.png" alt="logo">
             </div>
 
             <div class="search">

@@ -9,20 +9,17 @@
 	    	</div>
 	    </div>
 	   <div class="bottom">
-			<div class="col-md-6">
-				<div>
+			<div class="col-md-12">
+				<span class="">
 					<a href="#">Advertising</a>
 				    <a href="#">Business</a>
 				    <a href="#">About</a>
-				</div>
-			</div>
-
-			<div class="col-md-6">
-			    <div class="pull-right">
+				</span>
+				<span class="pull-right">
 			    	<a href="#">Privacy</a>
 				    <a href="#">Terms</a>
 				    <a href="#">Settings</a>
-			    </div>
+			    </span>
 			</div>
 	   </div>
 	</div>

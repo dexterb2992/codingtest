@@ -1,14 +1,27 @@
-@extends('layouts.nofooter')
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+    <head>
+        @include("partials._header")
 
-@section("content")
-	<img src="{{ $image }}" class="img-responsive">
-@endsection
-
-@section('styles')
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-		}
-	</style>
-@endsection
+        <style type="text/css">
+        	body {
+        		background: url("{{ $image  }}");
+        		background-size: cover;
+        	}
+        	.footer {
+        		bottom: 0;
+			    left: 0;
+			    position: absolute;
+			    right: 0;
+        	}
+        </style>
+    </head>
+    <body>
+    	<div class="flex-center position-ref full-height">
+    		<div class="footer">
+    			{{ $image }}
+    		</div>
+	        
+	    </div>
+    </body>
+</html>

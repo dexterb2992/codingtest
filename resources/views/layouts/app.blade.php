@@ -7,7 +7,7 @@
     <body>
     	<div class="flex-center position-ref full-height">
 	        @yield('content')
-	    </div>
-        @include("partials._footer")
+	        @include("partials._footer")
+        </div>
     </body>
 </html>

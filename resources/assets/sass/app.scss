@@ -17,7 +17,6 @@ html, body {
     height: 100vh;
     margin: 0;
     font-size: small;
-    padding: 0 12px 12px 35px;
 }
 
 body, td, a, p, .h {
@@ -25,7 +24,7 @@ body, td, a, p, .h {
 }
 
 .full-height {
-    height: 100vh;
+    height: 89vh;
 }
 
 .flex-center {
@@ -42,6 +41,7 @@ body, td, a, p, .h {
     position: absolute;
     right: 10px;
     top: 18px;
+    padding-right: 30px;
 }
 
 .content {
@@ -71,8 +71,9 @@ body, td, a, p, .h {
 	    }
     }
 
-    &:hover {
-    	text-decoration: underline;
+    &:hover, &:focus {
+	    opacity: .85;
+	    text-decoration: underline;
     }
 }
 
@@ -83,11 +84,6 @@ body, td, a, p, .h {
 a:visited {
     color: #609;
 }
-
-.logo-holder {
-    margin-top: 30px;
-}
-
 
 .btn-google {
     color: #fff;
@@ -135,7 +131,7 @@ a:visited {
     min-width: 54px;
     padding: 0 16px;
     text-align: center;
-    ding-top: 6px;
+    padding-top: 6px;
     padding-bottom: 6px;
 
     &:hover {
@@ -148,12 +144,6 @@ a:visited {
 	    border: 1px solid #c6c6c6;
 	    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 	    color: #222;
-	}
-}
-
-.content {
-	center {
-	    padding-bottom: 35px;
 	}
 }
 
@@ -193,6 +183,8 @@ a:visited {
 	    outline: none;
 	    border: none;
         background: url(data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw%3D%3D) transparent;
+        font-size: 13pt;
+	    color: black;
 	}
 }
 
@@ -206,7 +198,7 @@ a:visited {
 }
 
 .ui-menu.ui-widget.ui-widget-content.ui-autocomplete.ui-front {
-    min-width: 584px;
+    font-size: 13pt;
 }
 
 .footer {
@@ -221,11 +213,11 @@ a:visited {
 
     .inner-footer {
 		font-size: 11pt;
-	    height: 35px;
+	    height: 44px;
 	    position: absolute;
 	    width: 100%;
 
-	    border-top: 1px solid #e4e4e4;
+        border-bottom: 3px solid #e4e4e4;
 	    line-height: 40px;
 	    min-width: 980px;
     }
@@ -239,6 +231,10 @@ a:visited {
 	    text-align: left;
         color: rgba(0,0,0,.54);
 	    padding-left: 27px;
+
+	    .col-md-12 {
+		    border-bottom: 1px solid #e4e4e4;
+		}
     }
 
     .top, .bottom {
@@ -266,5 +262,5 @@ a.text-blue {
 
 .offered-languages {
 	font-size: small;
-    margin-bottom: 24px;
+    padding-top: 18px;
 }

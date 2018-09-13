@@ -13,6 +13,7 @@ class SearchController extends Controller
     	$this->endpoint = "https://demo.otalab.com/api/airports/autocomplete/";
     	$this->postEndpoint = "https://static.otalab.com/assets/background/airports/banner/";
     	$this->airports = [];
+        $this->client = new GuzzleClient();
     }
 
     /**
@@ -35,10 +36,8 @@ class SearchController extends Controller
     {
     	$term = $request->q;
 		if (!empty($term)) {
-			$client = new GuzzleClient();
-
 			$request = new HttpRequest('GET', $this->endpoint.$term);
-			$promise = $client->sendAsync($request)->then(function ($response) {
+			$promise = $this->client->sendAsync($request)->then(function ($response) {
 				$res = json_decode($response->getBody());
 			    foreach ($res as $key => $airport) {
 			    	$airport->value = $airport->iata;
@@ -63,10 +62,13 @@ class SearchController extends Controller
     {
     	$image = 'https://via.placeholder.com/500x500';
     	$iata = strtolower($request->search_val);
+        $searchTerm = strtolower($request->search);
 
     	if (!empty($iata)) {
     		$image = $this->postEndpoint.$iata.".jpg";
-    	}
+    	} else {
+            $image = $this->postEndpoint.$searchTerm.".jpg";
+        }
 
     	return view("results")->withImage($image);
     }
